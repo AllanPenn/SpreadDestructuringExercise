@@ -13,5 +13,19 @@ const avengers = {warMachine: "James Rhodes", theHulk: "Bruce Banner"};
 const {warMachine, theHulk} = avengers;
 console.log(warMachine, theHulk);
 const moreAvengers = {blackWidow: "Natasha Romanoff", hawkeye: "Clint Barton", ironMan: "Tony Stark"};
-const {nat, ...others} = moreAvengers;
+const {blackWidow: nat, ...others} = moreAvengers;
 console.log(nat, others);
+
+// BONUS
+const bonus = {
+  first: [1, 2, 3],
+  second: [4, 5, 6],
+  third: [7, 8, 9]
+};
+const all = [...bonus["first"], ...bonus["second"], ...bonus["third"]];
+console.log(all);
+const {first, second, third} = bonus;
+const [one, two, three] = first;
+const [four, five, six] = second;
+const [seven, eight, nine] = third;
+console.log(one, two, three, four, five, six, seven, eight, nine);
